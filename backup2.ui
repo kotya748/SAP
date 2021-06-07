@@ -1,0 +1,235 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface version="1.1">
+  <object class="tk.Toplevel" id="mainwindow">
+    <property name="background">#5cce76</property>
+    <property name="borderwidth">5</property>
+    <property name="container">false</property>
+    <property name="height">700</property>
+    <property name="highlightbackground">#5cce76</property>
+    <property name="maxsize">1920|1080</property>
+    <property name="minsize">800|600</property>
+    <property name="relief">ridge</property>
+    <property name="resizable">both</property>
+    <property name="title" translatable="yes">Daniel`s PictureToArray</property>
+    <property name="width">400</property>
+    <child>
+      <object class="ttk.Labelframe" id="mainlabelframe">
+        <property name="height">600</property>
+        <property name="text" translatable="yes">PictureToArray		</property>
+        <property name="width">800</property>
+        <layout manager="pack">
+          <property name="anchor">nw</property>
+          <property name="propagate">True</property>
+          <property name="side">top</property>
+        </layout>
+        <child>
+          <object class="ttk.Frame" id="frame3">
+            <property name="height">100</property>
+            <property name="relief">sunken</property>
+            <property name="width">1000</property>
+            <layout manager="pack">
+              <property name="anchor">n</property>
+              <property name="padx">5</property>
+              <property name="pady">5</property>
+              <property name="propagate">True</property>
+              <property name="side">right</property>
+            </layout>
+            <child>
+              <object class="tk.Canvas" id="canva">
+                <property name="background">#2c8b98</property>
+                <property name="confine">true</property>
+                <property name="height">720</property>
+                <property name="relief">groove</property>
+                <property name="state">normal</property>
+                <property name="width">1280</property>
+                <property name="xscrollincrement">3</property>
+                <property name="yscrollincrement">3</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">5</property>
+                  <property name="ipadx">1280</property>
+                  <property name="ipady">720</property>
+                  <property name="padx">50</property>
+                  <property name="propagate">True</property>
+                  <property name="row">0</property>
+                  <property name="sticky">ne</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="quit_button">
+                <property name="command" type="command" cbtype="simple">on_quit_button_clicked</property>
+                <property name="text" translatable="yes">Quit</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">1</property>
+                  <property name="ipadx">900</property>
+                  <property name="ipady">30</property>
+                  <property name="padx">20</property>
+                  <property name="pady">20</property>
+                  <property name="propagate">False</property>
+                  <property name="row">4</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="button2">
+                <property name="command" type="command" cbtype="simple">on_group_button_clicked</property>
+                <property name="text" translatable="yes">Group pixels</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="ipadx">125</property>
+                  <property name="ipady">20</property>
+                  <property name="padx">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">e</property>
+                  <property type="row" id="1" name="minsize">1</property>
+                  <property type="row" id="1" name="pad">5</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="channel_button">
+                <property name="command" type="command" cbtype="simple">on_channel_button_clicked</property>
+                <property name="text" translatable="yes">Disable R/G/B channel</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">3</property>
+                  <property name="ipadx">110</property>
+                  <property name="ipady">20</property>
+                  <property name="padx">300</property>
+                  <property name="pady">2</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property type="row" id="2" name="minsize">1</property>
+                  <property type="row" id="2" name="pad">1</property>
+                  <property type="row" id="2" name="uniform">11</property>
+                  <property type="row" id="2" name="weight">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="image_button">
+                <property name="command" type="command" cbtype="simple">on_image_button_clicked</property>
+                <property name="text" translatable="yes">Open image</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">2</property>
+                  <property name="ipadx">118</property>
+                  <property name="ipady">20</property>
+                  <property name="padx">100</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">True</property>
+                  <property name="row">1</property>
+                  <property name="sticky">nw</property>
+                  <property type="row" id="1" name="minsize">1</property>
+                  <property type="row" id="1" name="pad">5</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Button" id="button1">
+                <property name="text" translatable="yes">button1</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="ipadx">150</property>
+                  <property name="ipady">20</property>
+                  <property name="padx">150</property>
+                  <property name="propagate">False</property>
+                  <property name="row">1</property>
+                  <property name="rowspan">1</property>
+                  <property type="row" id="1" name="minsize">1</property>
+                  <property type="row" id="1" name="pad">5</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="ttk.Frame" id="frame1">
+                <property name="borderwidth">1</property>
+                <property name="cursor">arrow</property>
+                <property name="height">100</property>
+                <property name="relief">sunken</property>
+                <property name="style">Toolbutton</property>
+                <property name="takefocus">true</property>
+                <property name="width">1000</property>
+                <layout manager="grid">
+                  <property name="column">0</property>
+                  <property name="columnspan">5</property>
+                  <property name="ipadx">5</property>
+                  <property name="ipady">13</property>
+                  <property name="padx">18</property>
+                  <property name="pady">5</property>
+                  <property name="propagate">False</property>
+                  <property name="row">3</property>
+                  <property name="rowspan">1</property>
+                  <property name="sticky">w</property>
+                  <property type="row" id="2" name="minsize">1</property>
+                  <property type="row" id="2" name="pad">1</property>
+                  <property type="row" id="2" name="uniform">11</property>
+                  <property type="row" id="2" name="weight">1</property>
+                </layout>
+                <child>
+                  <object class="ttk.Checkbutton" id="checkbuttonR">
+                    <property name="text" translatable="yes">Disable R ch.</property>
+                    <layout manager="grid">
+                      <property name="column">3</property>
+                      <property name="columnspan">1</property>
+                      <property name="ipadx">80</property>
+                      <property name="ipady">20</property>
+                      <property name="padx">35</property>
+                      <property name="pady">10</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                      <property name="rowspan">1</property>
+                      <property type="row" id="2" name="uniform" />
+                      <property type="row" id="2" name="weight">0</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Radiobutton" id="radiobutton1">
+                    <property name="text" translatable="yes">Disable B ch.</property>
+                    <layout manager="grid">
+                      <property name="column">1</property>
+                      <property name="columnspan">1</property>
+                      <property name="ipadx">80</property>
+                      <property name="ipady">50</property>
+                      <property name="padx">35</property>
+                      <property name="pady">1</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                      <property name="rowspan">1</property>
+                    </layout>
+                  </object>
+                </child>
+                <child>
+                  <object class="ttk.Radiobutton" id="radiobutton2">
+                    <property name="text" translatable="yes">Disable G ch.
+</property>
+                    <layout manager="grid">
+                      <property name="column">0</property>
+                      <property name="columnspan">1</property>
+                      <property name="ipadx">80</property>
+                      <property name="ipady">20</property>
+                      <property name="padx">35</property>
+                      <property name="pady">35</property>
+                      <property name="propagate">True</property>
+                      <property name="row">1</property>
+                      <property name="rowspan">1</property>
+                    </layout>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="tk.Toplevel" id="msgbox">
+    <property name="height">200</property>
+    <property name="width">200</property>
+  </object>
+</interface>
